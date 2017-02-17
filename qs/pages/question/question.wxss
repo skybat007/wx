@@ -1,0 +1,69 @@
+.user{
+  font-family: 'Times New Roman', Times, serif;
+}
+.title {
+  margin-left: 0px;
+}
+
+.radio {
+  display: block;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.checkbox {
+  display: block;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.fillin {
+  text-decoration: underline;
+}
+.user-motto{
+  min-height:100px;
+  line-height: 25px;
+  margin:20px;
+  letter-spacing:1px;
+  border:1px solid #e6e6e6;
+  display:inline-block;
+  padding:10px;
+  border-radius:5px;
+
+}
+.user-warn{
+  color: red;
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
+.user-radio,.user-checkbox{
+  display:block;
+  margin:10px 15px 0 20px;
+  letter-spacing:1px;
+  line-height:25px;
+
+}
+.radio-group,.checkbox-group{
+  margin-left: 20px;
+}
+.user-fill{
+  margin: 10px 15px 0 20px;
+  display: block;
+}
+.user-input{
+  border-bottom:1px solid #e0e0e0;
+  display: inline-block;
+  width: 50%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+/** wxss **/
+/** 修改button默认的点击态样式类**/
+.button-hover {
+  background-color: red;
+}
+/** 添加自定义button点击态样式类**/
+.other-button-hover {
+  background-color: blue;
+}

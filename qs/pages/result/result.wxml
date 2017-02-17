@@ -1,0 +1,7 @@
+
+<!--result.wxml-->
+<view>
+  <view class="usermotto">
+    <text class="user-motto">您的问卷已提交成功，谢谢您的支持！</text>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+
+<!--question.wxml-->
+<view class="user">
+  <view class="usermotto">
+    <text class="user-motto">{{desc}}</text>
+    <text class="user-warn">{{warn}}</text>
+  </view>
+
+  <form bindsubmit="formSubmit">
+  <block wx:for="{{qaList}}" wx:for-item="item" wx:key="*this">
+    <view wx:if="{{item.type=='radio'}}">
+      <text class="user-radio">{{index + 1}}. 【单选】{{item.question}}</text>
+      <radio-group name="{{item.id}}" class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{item.list}}" wx:for-item="optionItem">
+          <radio value="{{optionItem.option}}" />{{optionItem.value}}
+        </label>
+      </radio-group>
+    </view>
+    <view wx:elif="{{item.type=='multi'}}">
+      <text class="user-checkbox">{{index + 1}}. 【多选】{{item.question}}</text>
+      <checkbox-group name="{{item.id}}" bindchange="checkboxChange" class="checkbox-group">
+        <label class="checkbox" wx:for="{{item.list}}" wx:for-item="optionItem">
+          <checkbox value="{{optionItem.option}}" />{{optionItem.value}}
+        </label>
+      </checkbox-group>
+    </view>
+    <view wx:else>
+      <text class="user-fill">
+      {{index + 1}}. 【填空】{{item.question}}
+      </text>
+      <input name="{{item.id}}" placeholder-class="fillin" class="user-input"/>
+    </view>
+  </block>
+  <button type="primary" size="default" formType="submit"> 提交问卷 </button>
+  </form>
+</view>
